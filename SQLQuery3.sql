@@ -1,0 +1,22 @@
+USE [HoSoNoiVu]
+GO
+
+/****** Object:  Table [dbo].[ButTich]    Script Date: 7/1/2022 9:12:17 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ButTich](
+	[AutographId] [int] IDENTITY(1,1) NOT NULL,
+	[Autograph] [nvarchar](2000) NULL,
+	[AutographName] [nvarchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[AutographId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

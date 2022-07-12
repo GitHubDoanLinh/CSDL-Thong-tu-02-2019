@@ -1,0 +1,22 @@
+USE [HoSoNoiVu]
+GO
+
+/****** Object:  Table [dbo].[CoQuanLuuTru]    Script Date: 7/1/2022 9:12:32 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CoQuanLuuTru](
+	[OrganId] [char](13) NOT NULL,
+	[OrganName] [nvarchar](50) NULL,
+	[OrganAddress] [nvarchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[OrganId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

@@ -1,0 +1,38 @@
+USE [HoSoNoiVu]
+GO
+
+/****** Object:  Table [dbo].[Muon]    Script Date: 7/1/2022 9:13:54 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Muon](
+	[BorrowId] [int] IDENTITY(1,1) NOT NULL,
+	[BorrowerId] [int] NOT NULL,
+	[LenderId] [int] NOT NULL,
+	[BorrowTime] [datetime] NULL,
+	[status] [char](1) NULL,
+ CONSTRAINT [PK__MuonHoSo__4295F83FA8802A4D] PRIMARY KEY CLUSTERED 
+(
+	[BorrowId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Muon]  WITH CHECK ADD  CONSTRAINT [FK__MuonHoSo__UserId__534D60F1] FOREIGN KEY([BorrowerId])
+REFERENCES [dbo].[Users] ([UserId])
+GO
+
+ALTER TABLE [dbo].[Muon] CHECK CONSTRAINT [FK__MuonHoSo__UserId__534D60F1]
+GO
+
+ALTER TABLE [dbo].[Muon]  WITH CHECK ADD  CONSTRAINT [FK_LenderId] FOREIGN KEY([LenderId])
+REFERENCES [dbo].[Users] ([UserId])
+GO
+
+ALTER TABLE [dbo].[Muon] CHECK CONSTRAINT [FK_LenderId]
+GO
+
+
